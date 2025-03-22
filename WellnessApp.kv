@@ -1,4 +1,3 @@
-# main.kv
 BoxLayout:
     orientation: 'vertical'
     padding: 10
@@ -60,9 +59,16 @@ BoxLayout:
         height: '48sp'
         on_press: app.calculate_score()
 
-    Label:
-        id: result_label
-        text: ''
-        font_size: '18sp'
-        size_hint_y: None
-        height: '48sp'
+    ScrollView:
+        size_hint_y: 1  # Allow the ScrollView to take up remaining space
+        bar_width: 10  # Width of the scrollbar
+        do_scroll_x: False  # Disable horizontal scrolling
+
+        Label:
+            id: result_label
+            text: ''
+            font_size: '18sp'
+            size_hint_y: None
+            height: self.texture_size[1]  
+            text_size: self.width, None 
+            padding: 10, 10
