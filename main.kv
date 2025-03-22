@@ -1,0 +1,68 @@
+# main.kv
+BoxLayout:
+    orientation: 'vertical'
+    padding: 10
+    spacing: 10
+
+    Label:
+        text: '🔵 Welcome to Mental Health First Aid'
+        font_size: '24sp'
+        size_hint_y: None
+        height: '48sp'
+
+    Label:
+        text: 'Please rate your current state (0-10 where 10 is best):'
+        font_size: '18sp'
+        size_hint_y: None
+        height: '36sp'
+
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: 10
+
+        Label:
+            text: '😊 Mood (0 = depressed, 10 = euphoric):'
+            font_size: '18sp'
+
+        Slider:
+            id: mood_slider
+            min: 0
+            max: 10
+            step: 1
+            value: 5
+
+        Label:
+            text: '😓 Stress (0 = calm, 10 = overwhelmed):'
+            font_size: '18sp'
+
+        Slider:
+            id: stress_slider
+            min: 0
+            max: 10
+            step: 1
+            value: 5
+
+        Label:
+            text: '😴 Sleep Quality (0 = insomnia, 10 = perfect rest):'
+            font_size: '18sp'
+
+        Slider:
+            id: sleep_slider
+            min: 0
+            max: 10
+            step: 1
+            value: 5
+
+    Button:
+        text: 'Calculate Wellness Score'
+        font_size: '18sp'
+        size_hint_y: None
+        height: '48sp'
+        on_press: app.calculate_score()
+
+    Label:
+        id: result_label
+        text: ''
+        font_size: '18sp'
+        size_hint_y: None
+        height: '48sp'
