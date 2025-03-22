@@ -1,0 +1,33 @@
+# Ignore Buildozer directories
+.buildozer/
+
+# Ignore Android build artifacts
+bin/
+dist/
+
+# Ignore Python virtual environment
+venv/
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.so
+
+# Ignore IDE-specific files
+.vscode/
+.idea/
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore Windows system files
+Thumbs.db
+
+# Ignore local development files
+local_settings.py
+
+# Ignore log files
+*.log
