@@ -1,0 +1,36 @@
+BoxLayout:
+    orientation: 'vertical'
+    padding: 20
+    spacing: 20
+
+    Slider:
+        id: mood_slider
+        min: 0
+        max: 10
+        value: 5
+        step: 1
+
+    Slider:
+        id: stress_slider
+        min: 0
+        max: 10
+        value: 5
+        step: 1
+
+    Slider:
+        id: sleep_slider
+        min: 0
+        max: 10
+        value: 5
+        step: 1
+
+    Button:
+        text: "Calculate Wellness Score"
+        on_press: app.calculate_score()
+
+    Label:
+        id: result_label
+        text: "Results will appear here"
+        halign: "center"
+        valign: "middle"
+        text_size: self.size
